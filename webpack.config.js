@@ -24,5 +24,19 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html'),
         })
-    ]
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        clientLogLevel: 'info',
+        compress: true,
+        port: 9000,
+        proxy: {
+            '/api': {
+                target: 'http://dummy.restapiexample.com/api/v1',
+                pathRewrite: {'^/api' : ''},
+                changeOrigin: true,
+                secure: false
+            }
+        }
+    }
 };
