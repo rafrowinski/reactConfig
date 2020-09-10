@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm t",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "author": "Rafał Rowiński",
@@ -23,6 +23,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@types/jest": "^26.0.13",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
@@ -32,6 +33,8 @@
     "eslint": "^7.8.1",
     "html-webpack-plugin": "^4.4.1",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
