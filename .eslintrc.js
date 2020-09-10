@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
     root: true,
     parser: '@typescript-eslint/parser',
@@ -9,4 +8,10 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
     ],
+    env: {
+        node: true,
+    },
+    rules: {
+        '@typescript-eslint/no-var-requires': 0,
+    },
 };
