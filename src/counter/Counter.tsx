@@ -4,7 +4,7 @@ import {useTypedDispatch} from '../store';
 import {addOne, add, selectCounter} from './counterSlice';
 import {useSelector} from 'react-redux';
 
-export const Counter: FC<{}> = () => {
+export const Counter: FC<null> = () => {
     const dispatch = useTypedDispatch();
     const counter = useSelector(selectCounter);
 
