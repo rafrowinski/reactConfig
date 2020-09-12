@@ -21,3 +21,17 @@ steps:
     npm run test
     npm run build
   displayName: 'npm install, lint, test and build'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'dist'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
